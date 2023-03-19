@@ -45,7 +45,7 @@ flatpickr('#datetime-picker', options);
 
 function addLeadingZero(value) {
   return String(value).padStart(2, '0');
-};
+}
 
 function convertMs(ms) {
   // Number of milliseconds per unit of time
@@ -61,8 +61,9 @@ function convertMs(ms) {
   // Remaining minutes
   const minutes = addLeadingZero(Math.floor(((ms % day) % hour) / minute));
   // Remaining seconds
-  const seconds = addLeadingZero(Math.floor((((ms % day) % hour) % minute) / second));
+  const seconds = addLeadingZero(
+    Math.floor((((ms % day) % hour) % minute) / second)
+  );
 
   return { days, hours, minutes, seconds };
-};
-
+}
