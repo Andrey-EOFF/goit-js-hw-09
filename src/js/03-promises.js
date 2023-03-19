@@ -33,4 +33,4 @@ function onFormSubmit(evt) {
     position += 1;
     delay += step;
   }
-};
+}
